@@ -1,0 +1,10 @@
+.loginDiv{
+		background-color: #1E2832;
+		padding: 10px;
+}
+
+.rightlogdiv {
+    position: absolute;
+    right: 100px;
+    width: 40%;
+}
