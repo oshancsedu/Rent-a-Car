@@ -1,6 +1,8 @@
 $('document').ready(function(){
 	$('.loginDiv').hide();
 
+    $('#mainInfo').load("../resources/views/travelform.blade.php");
+
 	$('.loginDiv').mouseleave(function(){
 		$('.loginDiv').slideUp();
 	});
@@ -11,14 +13,6 @@ $('document').ready(function(){
 
 	$('#btnBack').click(function(){
 		$('.loginDiv').slideUp();
+        change($('#btnNext'));
 	});
-
-	$('#mainInfo').load("../resources/views/travelform.blade.php");
-
-    $('#btnNext').click(function(){
-        alert('sjss');
-        //change();
-
-        $('#mainInfo').load("../resources/views/chooseCar.blade.php");
-    });
 });

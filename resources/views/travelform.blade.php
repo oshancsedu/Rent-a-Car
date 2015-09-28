@@ -1,5 +1,8 @@
 <script type="text/javascript" src='js/travelinfo.js'></script>
 <h2>Travel Inmorfation</h2>
+<div class="12u$">
+    <button class="special pull-right" id='btnNext'>Next <i class="fa fa-arrow-right"></i></button>
+</div>
 <div class="row uniform 50%">
 
     <div class="12u$">
@@ -47,9 +50,5 @@
     <div class="6u$ 12u$(xsmall)">
         <label for='tDate'><b>To : </b></label>
         <input type="date" name="tDate" id="tDate"/>
-    </div>
-
-    <div class="12u$">
-        <button class="special" id='btnNext'>Next</button>
     </div>
 </div>

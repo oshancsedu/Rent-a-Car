@@ -7,8 +7,9 @@
     @include('header')
     @include('banner')
     @include('description')
-    @include('reservation')
     @include('information')
+
+    @include('reservation')
     @include('feedback')
     @include('footer')
 @stop
