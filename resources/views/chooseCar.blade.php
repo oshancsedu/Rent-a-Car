@@ -15,3 +15,6 @@
         <div id="map" style="width: 1000px; height: 500px"></div>
     </div>
 </div>
+<pre id="debug">
+
+</pre>

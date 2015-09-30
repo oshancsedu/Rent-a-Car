@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('db','CompanyLocationXMLController@viewXML');
