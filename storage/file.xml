@@ -1,0 +1,26 @@
+&lt;companies&gt;
+            &lt;company
+        id=&quot;10000&quot;
+        name=&quot;ABCD&quot;
+        address=&quot;Gulshan&quot;
+        lat=&quot;23.780941&quot;
+        lng=&quot;90.41555&quot;
+        district=&quot;Dhaka&quot;
+        /&gt;
+            &lt;company
+        id=&quot;10001&quot;
+        name=&quot;Rental&quot;
+        address=&quot;Rampura&quot;
+        lat=&quot;23.768492&quot;
+        lng=&quot;90.424088&quot;
+        district=&quot;Dhaka&quot;
+        /&gt;
+            &lt;company
+        id=&quot;10002&quot;
+        name=&quot;XYZ&quot;
+        address=&quot;Mohakhali&quot;
+        lat=&quot;23.776356&quot;
+        lng=&quot;90.392014&quot;
+        district=&quot;Dhaka&quot;
+        /&gt;
+    &lt;/companies&gt;
