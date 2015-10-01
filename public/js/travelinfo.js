@@ -8,7 +8,6 @@ $('document').ready(function(){
         var source=$('#sourceLocation').val();
         //source="Dhaka,DhakaDivision,Bangladesh";
         source = source.replace(/\s+/g, '');
-        alert(source);
         $('#mainInfo').load("../resources/views/chooseCar.blade.php?source="+source);
 	});
 });

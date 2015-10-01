@@ -25,4 +25,11 @@
             </div>
         </div>
 </div>
-<div id="map" style="width: 1000px; height: 500px;"></div>
+<div class="row">
+    <div id="mapContainer">
+        <div id="map"></div>
+    </div>
+    <div class="col-md-4" id="carListContainer">
+        <?php @include('carlist.blade.php') ?>
+    </div>
+</div>

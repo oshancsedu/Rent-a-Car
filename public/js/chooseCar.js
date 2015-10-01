@@ -1,5 +1,7 @@
 $('document').ready(function(){
-    alert('done');
+    $('#map').css('width','100%').css('height','500px');
+    $('#mapContainer').addClass("col-md-8").addClass("col-md-offset-2");
+    $('#carListContainer').hide();
     initAutocomplete();
     $('#btnPrev').click(function(){
         $('#mainInfo').load("../resources/views/travelform.blade.php");
@@ -26,6 +28,15 @@ $('document').ready(function(){
 
 
 
+    /**********
+     * Showing car list
+     * **********/
+
+function showCarList()
+{
+    $('#mapContainer').removeClass("col-md-offset-2");
+    $('#carListContainer').show().slideDown();
+}
 
     /*************************
     * Map Set up
@@ -52,6 +63,7 @@ $('document').ready(function(){
 
         map=new google.maps.Map(document.getElementById("map"), mapProp);
         searchMarker =  new google.maps.Marker();
+        selectedMarker =  new google.maps.Marker();
         // Create the search box and link it to the UI element.
         var input = document.getElementById('address');
         var searchbar = document.getElementById('searchbar');
@@ -67,10 +79,9 @@ $('document').ready(function(){
         var sourceLocation= document.getElementById('location');
         sourceLocation=sourceLocation.textContent.trim();
         geocodeAddress(sourceLocation);
-        var locations = sourceLocation.split(',');
-        var len = locations.length;
-        alert(len);
-        downloadUrl("http://localhost/Rent-a-Car/public/db?source="+locations[len-3],function(data) {
+        //var locations = sourceLocation.split(',');
+        //var len = locations.length;
+        downloadUrl("http://localhost/Rent-a-Car/public/db?source="+sourceLocation,function(data) {
             var xml = data.responseXML;
             var companies = xml.documentElement.getElementsByTagName("company");
             var len = companies.length;
@@ -145,11 +156,12 @@ $('document').ready(function(){
             infoWindow.close();
         });
         google.maps.event.addListener(marker,'click',function() {
+            selectedMarker.setAnimation(null);
+            selectedMarker=marker;
+            showCarList();
             map.setZoom(11);
-            map.setCenter(marker.getPosition());
+            map.setCenter(marker.latitude -100.0,marker.longitude);
+            marker.setAnimation(google.maps.Animation.BOUNCE);
         });
-
-
-
     }
 });

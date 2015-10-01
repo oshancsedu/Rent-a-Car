@@ -16,7 +16,7 @@ class CompanyLocationXMLController extends Controller
         //$users= DB::table('product_detail')->get();
         //return view('index');//->withUsers($users);
         $district= Input::get('source');
-        $names = DB::table('company')->where('district','LIKE','%'.$district.'%')->get();
+        $names = DB::table('company')->get();
         //$content = View::make('companydetailxml')->withNames($names)->render();
 
         //File::put(storage_path().'/file.xml', $content);
@@ -33,13 +33,16 @@ class CompanyLocationXMLController extends Controller
 
         foreach($names as $name)
         {
-            $company = $xml->addChild('company');
-            $company->addAttribute('id',$name->id);
-            $company->addAttribute('name',$name->name);
-            $company->addAttribute('lat',$name->lat);
-            $company->addAttribute('lng',$name->lng);
-            $company->addAttribute('address',$name->address);
-            $company->addAttribute('district',$name->district);
+            if(strpos($district,$name->district) !== false)
+            {
+                $company = $xml->addChild('company');
+                $company->addAttribute('id',$name->id);
+                $company->addAttribute('name',$name->name);
+                $company->addAttribute('lat',$name->lat);
+                $company->addAttribute('lng',$name->lng);
+                $company->addAttribute('address',$name->address);
+                $company->addAttribute('district',$name->district);
+            }
         }
         $xml->saveXML('test.xml');
 

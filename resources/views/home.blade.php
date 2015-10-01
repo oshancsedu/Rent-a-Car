@@ -4,7 +4,7 @@
 @stop
 
 @section('body')
-    {{--@include('header')
+    {{--}}@include('header')
     @include('banner')
     @include('description')
     @include('information')--}}
