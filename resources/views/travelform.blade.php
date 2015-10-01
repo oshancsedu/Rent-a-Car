@@ -9,28 +9,14 @@
         <span class="image"><img src="images/step1.png" alt="" /></span>
     </div>
 
-    <div class="6u">
-        <div class="select-wrapper">
-            <select name="source" id="source">
-                <option value="n/a">- Starting Location -</option>
-                <option value="Kalabagan">Kalabagan</option>
-                <option value="Shukrabad">Shukrabad</option>
-                <option value="Dhanmondi">Dhanmondi</option>
-                <option value="Banani">Banani</option>
-            </select>
-        </div>
+    <div class="6u 12u$(xsmall)">
+        <input name="name" placeholder="Starting Address" type="text" id="sourceLocation"/>
     </div>
-    <div class="6u$">
-        <div class="select-wrapper">
-            <select name="destination" id="destination">
-                <option value="n/a">- Distination Location -</option>
-                <option value="Kalabagan">Kalabagan</option>
-                <option value="Shukrabad">Shukrabad</option>
-                <option value="Dhanmondi">Dhanmondi</option>
-                <option value="Banani">Banani</option>
-            </select>
-        </div>
+
+    <div class="6u 12u$(xsmall)">
+        <input name="name" placeholder="Destination Address" type="text" id="distLocation"/>
     </div>
+
     <div class="12u$">
         <div class="select-wrapper">
             <select name="vahicle" id="vahicle">

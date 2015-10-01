@@ -4,10 +4,10 @@
 @stop
 
 @section('body')
-    @include('header')
+    {{--@include('header')
     @include('banner')
     @include('description')
-    @include('information')
+    @include('information')--}}
 
     @include('reservation')
     @include('feedback')

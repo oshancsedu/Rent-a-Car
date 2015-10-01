@@ -39,8 +39,9 @@
         <script type="text/javascript" src="js/dropzone.js"></script>
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
-            @yield('javascript')
+        @yield('javascript')
     </head>
     <body class="landing">
         @yield('body')

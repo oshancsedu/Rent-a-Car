@@ -1,5 +1,14 @@
+var sourceLocation = document.getElementById('sourceLocation');
+var sourceSearchBox = new google.maps.places.SearchBox(sourceLocation);
+var distLocation = document.getElementById('distLocation');
+var distSearchBox = new google.maps.places.SearchBox(distLocation);
+
 $('document').ready(function(){
     $('#btnNext').click(function(){
-        $('#mainInfo').load("../resources/views/chooseCar.blade.php");
+        var source=$('#sourceLocation').val();
+        //source="Dhaka,DhakaDivision,Bangladesh";
+        source = source.replace(/\s+/g, '');
+        alert(source);
+        $('#mainInfo').load("../resources/views/chooseCar.blade.php?source="+source);
 	});
 });

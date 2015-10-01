@@ -15,8 +15,8 @@ class CompanyLocationXMLController extends Controller
     {
         //$users= DB::table('product_detail')->get();
         //return view('index');//->withUsers($users);
-        $district= Input::get('district');
-        $names = DB::table('company')->where('district',$district)->get();
+        $district= Input::get('source');
+        $names = DB::table('company')->where('district','LIKE','%'.$district.'%')->get();
         //$content = View::make('companydetailxml')->withNames($names)->render();
 
         //File::put(storage_path().'/file.xml', $content);

@@ -1,20 +1,28 @@
-<link rel="stylesheet" href="css/gmap.css" />
+<link href="css/searchBar.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.searchMeme.js" type="text/javascript"></script>
 <script src="js/chooseCar.js"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete" async defer></script>
 <h2>Choose Your Car</h2>
+
+<?php $source = $_GET['source'];?>
+
 <div class="12u$">
     <button class="special pull-left" id='btnPrev'><i class="fa fa-arrow-left"></i>Prev</button>
 </div>
+
 <div class="row uniform 50%">
     <div class="12u$">
         <span class="image"><img src="images/step2.png" alt="" /></span>
     </div>
-    <div class="12u$">
-        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-        <div id="map" style="width: 1000px; height: 500px"></div>
-    </div>
 </div>
-<pre id="debug">
-
-</pre>
+<div class="row uniform 0%" style=" padding: 5px 2px 2px 2px" id="searchbar">
+        <div>
+            <div class="demo">
+                <input type="text" id="address"/>
+                <p id="location" style="visibility: hidden">
+                    <?php echo $source; ?>
+                </p>
+            </div>
+        </div>
+</div>
+<div id="map" style="width: 1000px; height: 500px;"></div>
